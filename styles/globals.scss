@@ -1,0 +1,75 @@
+@import './variables.scss';
+@import './bootstrap.scss';
+
+
+::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    width: 0.75rem;
+}
+::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+    background-color: $green;
+    border-radius: 12px;
+    border: 3px solid $secondary;
+}
+::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+    background-color: $secondary;
+    border-radius: 12px;
+}
+
+.copied-link {
+    &,
+    &.form-control[readonly] {
+        border-color: $success;
+        background-color: transparentize($success, 0.7);
+    }
+}
+.copy-link {
+    cursor: pointer;
+}
+
+.generated-link {
+    position: relative;
+    padding-right: 32px;
+    // &:not(.copied-link) {
+        .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            margin-right: 12px;
+        }
+    // }
+}
+
+.no-resize {
+    resize: none;
+}
+
+.main {
+    // min-height: calc(100vh - 150px);
+    min-height: 70vh;
+
+    .field-error {
+        min-height: 25px;
+    }
+}
+
+.howto {
+    .list {
+        .number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: $light;
+            text-shadow: 4px 5px 0 var(--primary);
+        }
+    }
+}
+
+footer {
+    // position: absolute;
+    // right: 10px;
+    // bottom: 10px;
+}

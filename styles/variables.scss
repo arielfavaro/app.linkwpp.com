@@ -1,0 +1,27 @@
+// Colors
+$pantone_7488_c: #78D64B;
+$pantone_2285_c: #93DA49;
+$pantone_13_0340_tn: #69FF47;
+
+$green: #1fe453;
+$primary: $green;
+$secondary: #201d31;
+
+$enable-responsive-font-sizes: true;
+
+$body-bg: #0c0f13;
+$body-color: #ced4da;
+
+$border-radius: 18px;
+
+// Forms
+$input-bg: $secondary; //#121b27;//lighten($body-bg, 15%);
+// $input-border-radius: 18px;
+$input-border-width: 2px;
+$input-border-color: transparent;
+// $input-focus-bg: red;
+$input-focus-border-color: $green;
+$input-focus-box-shadow: none;
+$input-padding-y: .8rem;
+$input-color: #fff;
+$input-disabled-bg: $input-bg;
