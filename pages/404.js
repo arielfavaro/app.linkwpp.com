@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from "../components/Header";
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Custom404() {
     return (
@@ -13,7 +13,7 @@ export default function Custom404() {
             <Header />
             <h1 className="text-center my-5 text-danger display-2 font-weight-bold">404</h1>
             <div className="d-flex justify-content-center">
-                <Image src="/astronaut-404.svg" width="220" height="220" alt="Página não encontrada" />
+                <img src="/icons/astronaut-404.svg" width="220" height="220" alt="Página não encontrada" />
             </div>
             <h1 className="text-center mt-2 text-danger display-3"><span className="d-block">Houston,</span> we have a problem!</h1>
             <div className="d-flex justify-content-center my-4">
