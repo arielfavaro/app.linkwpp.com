@@ -9,32 +9,7 @@ import MaskedInput from "react-text-mask";
 import Header from '../components/Header';
 import { MdContentCopy } from "react-icons/md";
 import QrCode from '../components/QrCode';
-
-
-const numberMask = [
-    "(",
-    /\d/,
-    /\d/,
-    ")",
-    " ",
-    /\d/,
-    " ",
-    /\d/,
-    /\d/,
-    /\d/,
-    /\d/,
-    "-",
-    /\d/,
-    /\d/,
-    /\d/,
-    /\d/
-];
-const countryMask = [
-    "+",
-    /\d/,
-    /\d/,
-    /\d/,
-];
+import { countryMask, numberMask } from "../lib/masks";
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
@@ -93,17 +68,16 @@ export default function Home() {
                                 <div className="col-12 col-md-6">
                                     <div className="form-group mb-0 d-flex">
                                         <div className="flex-shrink-1 pr-3">
-                                            <Field name="countryCode" render={({ field }) => (
-                                                <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" type="text" className="form-control" size="3"></MaskedInput>
-                                            )}>
+                                            <Field name="countryCode">
+                                                {({ field }) => <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" type="text" className="form-control" size="3"></MaskedInput>}
                                             </Field>
                                             <FieldError>
                                                 {errors.countryCode && touched.countryCode ? errors.countryCode : null}
                                             </FieldError>
                                         </div>
                                         <div className="flex-grow-1">
-                                            <Field name="number" render={({ field }) => (
-                                                <MaskedInput
+                                            <Field name="number" >
+                                                {({ field }) => <MaskedInput
                                                     {...field}
                                                     mask={numberMask}
                                                     id="number"
@@ -117,8 +91,8 @@ export default function Home() {
                                                             ? "form-control error"
                                                             : "form-control"
                                                     }
-                                                />
-                                            )} />
+                                                />}
+                                            </Field>
                                             <FieldError>
                                                 {errors.number && touched.number ? errors.number : null}
                                             </FieldError>
@@ -162,8 +136,8 @@ export default function Home() {
             <footer className="mb-2 mt-4">
                 <div className="d-flex flex-column align-items-end justify-content-end">
                     <Link href="/politica-privacidade"><a>Política de Privacidade</a></Link>
-                    <span className="small d-block">Nenhum dado será armazenado</span>
-                    <span className="small d-block">Ver. 0.1.1</span>
+                    {/* <span className="small d-block">Nenhum dado será armazenado</span> */}
+                    <span className="small d-block">Ver. 0.1.3</span>
                 </div>
             </footer>
         </div>
