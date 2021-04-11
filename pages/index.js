@@ -65,7 +65,7 @@ export default function Home() {
                                     <div className="form-group mb-0 d-flex">
                                         <div className="flex-shrink-1 pr-3">
                                             <Field name="countryCode">
-                                                {({ field }) => <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" type="text" className="form-control" size="3"></MaskedInput>}
+                                                {({ field }) => <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" type="tel" className="form-control" size="3"></MaskedInput>}
                                             </Field>
                                             <FieldError>
                                                 {errors.countryCode && touched.countryCode ? errors.countryCode : null}
@@ -78,7 +78,7 @@ export default function Home() {
                                                     mask={numberMask}
                                                     id="number"
                                                     placeholder="Número"
-                                                    type="text"
+                                                    type="tel"
                                                     guide={false}
                                                     // onChange={handleChange}
                                                     // onBlur={handleBlur}
