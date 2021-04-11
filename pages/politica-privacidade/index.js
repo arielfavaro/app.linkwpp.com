@@ -11,7 +11,7 @@ function PoliticaPrivacidade() {
                 <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/politica-privacidade" />
             </Head>
             <Header />
-            <div className="d-flex justify-content-start mt-5">
+            <div className="d-flex justify-content-center justify-content-md-start mt-3 mt-md-4">
                 <Link href="/"><a className="btn btn-success font-weight-bold text-white">Início</a></Link>
             </div>
 
