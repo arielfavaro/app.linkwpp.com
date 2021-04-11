@@ -18,11 +18,10 @@ function PoliticaPrivacidade() {
             <div className="bg-secondary p-3 p-md-4 rounded mt-3">
                 <h2>Política de Privacidade</h2>
                 <p>A sua privacidade é importante para nós. Respeitamos a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://geradorlinkwhatsapp.com/">Gerador de Link para WhatsApp</a>, e outros sites que possuímos e operamos.</p>
-                <p>Não armazenados quaisquer dados fornecido no formulário do gerador de links.</p>
                 <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
 
-                {/* <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis &#8203;&#8203;para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou
-                modificação não autorizados.</p> */}
+                <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis &#8203;&#8203;para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou
+                modificação não autorizados.</p>
 
                 <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
                 <p>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
