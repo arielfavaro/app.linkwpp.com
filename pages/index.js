@@ -10,7 +10,7 @@ import Header from '../components/Header';
 import { MdContentCopy } from "react-icons/md";
 import QrCode from '../components/QrCode';
 import { countryMask, numberMask } from "../lib/masks";
-import generateLink from "../lib/services/generateLink";
+import generateLink from "../services/generateLink";
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()

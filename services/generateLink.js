@@ -1,4 +1,4 @@
-import { API_GERADOR } from '../api';
+import { API_GERADOR } from '../lib/api';
 
 async function generateLink({ countryCode, number, message }, { link_generated, setLinkGenerated }) {
     const res = await fetch(`${API_GERADOR}/link`, {
