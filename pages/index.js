@@ -127,7 +127,7 @@ export default function Home() {
                                         </FieldError>
                                     </div>
                                     <div className="d-flex justify-content-center">
-                                        <button type="submit" className={`btn btn-${link ? 'dark' : 'success'} btn-generate-link font-weight-bold w-100`} disabled={isSubmitting}>{link ? 'Gerar novamente' : 'Gerar Link'}</button>
+                                        <button type="submit" className={`btn btn-${link ? 'dark' : 'success'} btn-generate-link font-weight-bold w-100`} disabled={isSubmitting}>{isSubmitting ? 'Aguarde...' : link ? 'Gerar novamente' : 'Gerar Link'}</button>
                                     </div>
                                 </div>
                             </div>
