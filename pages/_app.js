@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 // import '../styles/globals.css'
 import '../styles/globals.scss';
 
@@ -8,8 +10,8 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-                <meta key="description" name="description" content="Crie links encurtado para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes." />
+                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,user-scalable=yes" />
+                <meta key="description" name="description" content="Crie link encurtado para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes." />
                 <meta key="keywords" name="keywords" content="link whatsapp, links, link do whatsapp, gerador de link whatsapp, gerar link whatsapp, gerador de link, gerador link whatsapp, criar link whatsapp, links de whatsapp, qrcode whatsapp, link qrcode, criar qrcode whatsapp" />
                 <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 <link rel="icon" href="/favicon.ico" />
@@ -42,10 +44,12 @@ function MyApp({ Component, pageProps }) {
                     sizes="512x512"
                 />
                 <link rel="apple-touch-icon" href="/icons/icon192.png"></link>
-                <meta name="theme-color" content="#1fe453" />
+                <meta name="theme-color" content="#37d662" />
 
             </Head>
+            <Nav />
             <Component {...pageProps} />
+            <Footer />
         </>
     )
 }

@@ -11,6 +11,7 @@ import { MdContentCopy } from "react-icons/md";
 import QrCode from '../components/QrCode';
 import { countryMask, numberMask } from "../lib/masks";
 import generateLink from "../services/generateLink";
+import FieldError from '../components/FieldError';
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
@@ -20,12 +21,6 @@ const gerarLinkSchema = Yup.object().shape({
     countryCode: Yup.string().required('Obrigatório'),
     message: Yup.string().required('Digite uma mensagem').max(200, 'Máximo de 200 caracteres'),
 });
-
-function FieldError({ children }) {
-    return (
-        <div className="text-warning field-error">{children}</div>
-    )
-}
 
 export default function Home() {
 
@@ -43,7 +38,7 @@ export default function Home() {
             <div className="container main p-0">
                 <Head>
                     <title key="title">Gerador de Link para WhatsApp</title>
-                    <meta key="description" name="description" content="Crie links encurtado para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes." />
+                    <meta key="description" name="description" content="Crie link encurtado para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes." />
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 </Head>
                 <Header />
@@ -65,7 +60,7 @@ export default function Home() {
                                     <div className="form-group mb-0 d-flex">
                                         <div className="flex-shrink-1 pr-3">
                                             <Field name="countryCode">
-                                                {({ field }) => <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" type="tel" className="form-control" size="3"></MaskedInput>}
+                                                {({ field }) => <MaskedInput {...field} mask={countryMask} guide={false} id="countryCode" placeholder="Cód. País" type="tel" className="form-control" size="3"></MaskedInput>}
                                             </Field>
                                             <FieldError>
                                                 {errors.countryCode && touched.countryCode ? errors.countryCode : null}
@@ -95,7 +90,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="form-group mb-0">
-                                        <Field id="message" name="message" className="form-control" rows="5" maxLength="200" placeholder="Digite a mensagem que o seu cliente irá ver ao abrir o link" as="textarea" />
+                                        <Field id="message" name="message" className="form-control" rows="5" maxLength="200" placeholder="Digite a mensagem que o seu cliente irá ver ao abrir o link. Exemplo: Olá, tenho interesse em seus produtos..." as="textarea" />
                                         <FieldError>
                                             {errors.message && touched.message ? errors.message : null}
                                         </FieldError>
@@ -129,13 +124,10 @@ export default function Home() {
                     </div>
                 }
             </div>
-            <footer className="mb-2 mt-4">
-                <div className="d-flex flex-column align-items-end justify-content-end">
-                    <Link href="/politica-privacidade"><a>Política de Privacidade</a></Link>
-                    {/* <span className="small d-block">Nenhum dado será armazenado</span> */}
-                    <span className="small d-block">Ver. 0.1.5</span>
-                </div>
-            </footer>
+            <section className="container mt-5 p-0 text-center">
+                <h2 className="font-weight-normal h6">Está com dúvidas ou quer dicas de uso? </h2>
+                <p>Visite a nossa seção <Link href="/como-usar"><a className="text-primary font-weight-bold">Como usar</a></Link></p>
+            </section>
         </div>
     )
 }
