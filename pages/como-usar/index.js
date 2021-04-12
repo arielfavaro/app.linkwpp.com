@@ -27,14 +27,15 @@ function ComoUsar() {
                     <title key="title">Como usar - Gerador de Link para WhatsApp</title>
                     <meta key="description" name="description" content="Confira nossas dicas e veja como gerar um link para WhatsApp" />
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/como-usar" />
-                    <script type="application/ld+json">
-                        {`
+                    <script type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: `
                             "@context": "https://schema.org",
                             "@type": "FAQPage",
                             "mainEntity": [
                                 ${mapped_questions()}
-                            ]
-                        `}
+                            ]`
+                        }}>
                     </script>
                 </Head>
                 <Header title={<>Como <span className="text-primary">usar</span></>} description="Confira nossas dicas e veja como gerar um link para WhatsApp" />
