@@ -29,12 +29,12 @@ function ComoUsar() {
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/como-usar" />
                     <script type="application/ld+json"
                         dangerouslySetInnerHTML={{
-                            __html: `
+                            __html: `{
                             "@context": "https://schema.org",
                             "@type": "FAQPage",
                             "mainEntity": [
                                 ${mapped_questions()}
-                            ]`
+                            ]}`
                         }}>
                     </script>
                 </Head>
