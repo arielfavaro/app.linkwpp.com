@@ -53,7 +53,7 @@ function MyLinks() {
                                         </div>
                                         <div className="col-12 col-md-3">
                                             <span className="d-block mb-2">Acessos: <span className="font-weight-bold text-primary h5">{link.opens_count}</span></span>
-                                            <span>Criado em: {new Date(Date.parse(link.created_at)).toLocaleString('pt-BR', { timeZone: 'UTC' })}</span>
+                                            <span>Criado em: {new Date(Date.parse(link.created_at)).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}</span>
                                         </div>
                                     </li>
                                 ))}
