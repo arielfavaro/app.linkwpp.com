@@ -61,7 +61,7 @@ function Contato() {
                             <div className="row justify-content-center">
                                 <div className="col-12 col-md-6">
                                     <div className="row m-0">
-                                        <div className="col-6 px-0 col-md-5">
+                                        <div className="col-12 px-0 col-md-5">
                                             <div className="form-group mb-0">
                                                 <Field id="name" name="name" className="form-control" maxLength="100" placeholder="Seu nome" type="text" />
                                                 <FieldError>
@@ -69,7 +69,7 @@ function Contato() {
                                                 </FieldError>
                                             </div>
                                         </div>
-                                        <div className="col-6 px-0 col-md-7">
+                                        <div className="col-12 px-0 col-md-7">
                                             <div className="form-group mb-0">
                                                 <Field id="email" name="email" className="form-control" maxLength="100" placeholder="Seu e-mail" type="email" />
                                                 <FieldError>
@@ -93,7 +93,7 @@ function Contato() {
                                                 </FieldError>
                                             </div>
                                         </div>
-                                        <div className="col-6 px-0 col-md-4">
+                                        <div className="col-12 px-0 col-md-4">
                                             <div className="form-group mb-0">
                                                 <Field name="phone_number">
                                                     {({ field }) => <MaskedInput {...field} mask={numberMask} guide={false} id="phoneNumber" placeholder="Celular" type="tel" className="form-control"></MaskedInput>}
