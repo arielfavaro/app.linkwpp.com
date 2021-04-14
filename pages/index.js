@@ -24,13 +24,18 @@ const gerarLinkSchema = Yup.object().shape({
 
 export default function Home() {
 
-    const [link_generated, setLinkGenerated] = useState({ link: '', link_shortened: '', copiado: false });
+    const [link_generated, setLinkGenerated] = useState({ link: '', link_shortened: '', copied: false, id: '', link_base: '', link_code: '' });
 
     const copiarLink = () => {
         if (link_generated.link_shortened) {
             copy(link_generated.link_shortened);
-            setLinkGenerated({ ...link_generated, copiado: true });
+            setLinkGenerated({ ...link_generated, copied: true });
         }
+    }
+
+    const storeLink = (id) => {
+        const previous = JSON.parse(localStorage.getItem('geradorlinkwhatsapp.links')) || [];
+        localStorage.setItem('geradorlinkwhatsapp.links', JSON.stringify([...previous, id]));
     }
 
     return (
@@ -50,7 +55,11 @@ export default function Home() {
                     }}
                     validationSchema={gerarLinkSchema}
                     onSubmit={async (values) => {
-                        await generateLink(values, { link_generated, setLinkGenerated });
+
+                        const response = await generateLink(values);
+                        const { id, link_base, link_code, original, shortened } = response.data;
+                        setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base, link_code })
+                        storeLink(id);
                     }}
                 >
                     {({ errors, touched, isSubmitting, dirty }) => (
@@ -108,12 +117,12 @@ export default function Home() {
                         <div className="col-12 col-md-6">
                             <span className="d-block text-center h5">Link gerado 🔗</span>
                             <div className="form-group">
-                                <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copiado ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
+                                <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copied ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
                                     {link_generated.link_shortened}
                                     <MdContentCopy className="icon" />
                                 </div>
                                 <div className="d-flex justify-content-center mt-3">
-                                    <button className={`btn btn-${link_generated.copiado ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copiado ? 'Link copiado 😉' : 'Copiar'}</button>
+                                    <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copied 😉' : 'Copiar'}</button>
                                     <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
                                 </div>
                             </div>

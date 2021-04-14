@@ -1,6 +1,6 @@
 import { api } from "../lib/api";
 
-async function generateLink({ countryCode, number, message }, { link_generated, setLinkGenerated }) {
+async function generateLink({ countryCode, number, message }) {
 
     const response = await api.post('/link', {
         "phone_country_code": countryCode.replace(/\D/g, ''),
@@ -8,8 +8,7 @@ async function generateLink({ countryCode, number, message }, { link_generated, 
         "message": message
     });
 
-    const { shortened, original } = response.data;
-    setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copiado: false })
+    return response;
 }
 
 export default generateLink;
