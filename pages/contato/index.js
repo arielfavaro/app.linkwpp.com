@@ -8,6 +8,10 @@ import { numberMask } from "../../lib/masks";
 import MaskedInput from "react-text-mask";
 
 const sendContatoSchema = Yup.object().shape({
+    email: Yup.string()
+        .email('E-mail deve ser válido')
+        .max(100, 'Máximo 100 caracteres')
+        .required('Obrigatório'),
     name: Yup.string()
         .max(50, 'Máximo 50 caracteres')
         .required('Digite seu nome'),
@@ -35,6 +39,7 @@ function Contato() {
 
                 <Formik
                     initialValues={{
+                        email: '',
                         name: '',
                         city: '',
                         uf: '',
@@ -56,7 +61,7 @@ function Contato() {
                             <div className="row justify-content-center">
                                 <div className="col-12 col-md-6">
                                     <div className="row m-0">
-                                        <div className="col-6 px-0 col-md-6">
+                                        <div className="col-6 px-0 col-md-5">
                                             <div className="form-group mb-0">
                                                 <Field id="name" name="name" className="form-control" maxLength="100" placeholder="Seu nome" type="text" />
                                                 <FieldError>
@@ -64,7 +69,15 @@ function Contato() {
                                                 </FieldError>
                                             </div>
                                         </div>
-                                        <div className="col-6 px-0 col-md-6">
+                                        <div className="col-6 px-0 col-md-7">
+                                            <div className="form-group mb-0">
+                                                <Field id="email" name="email" className="form-control" maxLength="100" placeholder="Seu e-mail" type="email" />
+                                                <FieldError>
+                                                    {errors.email && touched.email ? errors.email : null}
+                                                </FieldError>
+                                            </div>
+                                        </div>
+                                        <div className="col-6 px-0 col-md-5">
                                             <div className="form-group mb-0">
                                                 <Field id="city" name="city" className="form-control" maxLength="100" placeholder="Cidade" type="text" />
                                                 <FieldError>
@@ -72,7 +85,7 @@ function Contato() {
                                                 </FieldError>
                                             </div>
                                         </div>
-                                        <div className="col-6 px-0 col-md-6">
+                                        <div className="col-6 px-0 col-md-3">
                                             <div className="form-group mb-0">
                                                 <Field id="uf" name="uf" className="form-control" maxLength="100" placeholder="Estado" type="text" />
                                                 <FieldError>
@@ -80,7 +93,7 @@ function Contato() {
                                                 </FieldError>
                                             </div>
                                         </div>
-                                        <div className="col-6 px-0 col-md-6">
+                                        <div className="col-6 px-0 col-md-4">
                                             <div className="form-group mb-0">
                                                 <Field name="phone_number">
                                                     {({ field }) => <MaskedInput {...field} mask={numberMask} guide={false} id="phoneNumber" placeholder="Celular" type="tel" className="form-control"></MaskedInput>}
