@@ -122,7 +122,7 @@ export default function Home() {
                                     <MdContentCopy className="icon" />
                                 </div>
                                 <div className="d-flex justify-content-center mt-3">
-                                    <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copied 😉' : 'Copiar'}</button>
+                                    <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copiado 😉' : 'Copiar'}</button>
                                     <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
                                 </div>
                             </div>
