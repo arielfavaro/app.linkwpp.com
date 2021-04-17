@@ -134,16 +134,16 @@ export default function Home() {
                                 </div>
                             </div>
                         }
+                        <section className="container mt-5 p-0 text-center">
+                            <h2 className="font-weight-normal h6">Está com dúvidas ou quer dicas de uso? </h2>
+                            <p>Visite a nossa seção <Link href="/como-usar"><a className="text-primary font-weight-bold">Como usar</a></Link></p>
+                        </section>
                     </div>
                     <div className="col-12 col-md-3 order-3 order-md-3">
                         <AdsRight />
                     </div>
                 </div>
             </div>
-            <section className="container mt-5 p-0 text-center">
-                <h2 className="font-weight-normal h6">Está com dúvidas ou quer dicas de uso? </h2>
-                <p>Visite a nossa seção <Link href="/como-usar"><a className="text-primary font-weight-bold">Como usar</a></Link></p>
-            </section>
         </div>
     )
 }
