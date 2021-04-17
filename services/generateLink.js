@@ -1,4 +1,4 @@
-import { api } from "../lib/api";
+import { api } from "@/lib/api";
 
 async function generateLink({ countryCode, number, message }) {
 

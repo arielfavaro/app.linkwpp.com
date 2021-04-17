@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
-import myPublicLinks from "../../services/myPublicLinks";
+import Header from "@/components/Header";
+import myPublicLinks from "@/services/myPublicLinks";
 import PulseLoader from "react-spinners/PulseLoader";
 
 function MyLinks() {

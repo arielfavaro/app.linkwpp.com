@@ -1,10 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import Head from "next/head";
-import FieldError from "../../components/FieldError";
-import Header from "../../components/Header";
-import sendContato from "../../services/sendContato";
+import FieldError from "@/components/FieldError";
+import Header from "@/components/Header";
+import sendContato from "@/services/sendContato";
 import * as Yup from 'yup';
-import { numberMask } from "../../lib/masks";
+import { numberMask } from "@/lib/masks";
 import MaskedInput from "react-text-mask";
 
 const sendContatoSchema = Yup.object().shape({

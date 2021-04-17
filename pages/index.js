@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
-// import styles from '../styles/Home.module.css'
+// import styles from '@/styles/Home.module.css'
 import { useState } from 'react';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import copy from 'copy-to-clipboard';
 import MaskedInput from "react-text-mask";
-import Header from '../components/Header';
+import Header from '@/components/Header';
 import { MdContentCopy } from "react-icons/md";
-import QrCode from '../components/QrCode';
-import { countryMask, numberMask } from "../lib/masks";
-import generateLink from "../services/generateLink";
-import FieldError from '../components/FieldError';
+import QrCode from '@/components/QrCode';
+import { countryMask, numberMask } from "@/lib/masks";
+import generateLink from "@/services/generateLink";
+import FieldError from '@/components/FieldError';
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()

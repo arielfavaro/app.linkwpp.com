@@ -1,4 +1,4 @@
-import { api } from "../lib/api";
+import { api } from "@/lib/api";
 
 async function sendContato(fields) {
     const response = await api.post('/contact', {
