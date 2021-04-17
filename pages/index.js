@@ -12,6 +12,7 @@ import QrCode from '@/components/QrCode';
 import { countryMask, numberMask } from "@/lib/masks";
 import generateLink from "@/services/generateLink";
 import FieldError from '@/components/FieldError';
+import { AdsLeft, AdsRight } from '@/components/Ads';
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
@@ -47,25 +48,28 @@ export default function Home() {
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 </Head>
                 <Header />
-                <Formik
-                    initialValues={{
-                        countryCode: '+55',
-                        number: '',
-                        message: '',
-                    }}
-                    validationSchema={gerarLinkSchema}
-                    onSubmit={async (values) => {
+                <div className="row justify-content-center">
+                    <div className="col-12 col-md-3 order-2 order-md-1">
+                        <AdsLeft />
+                    </div>
+                    <div className="col-12 col-md-6 order-1 order-md-2">
+                        <Formik
+                            initialValues={{
+                                countryCode: '+55',
+                                number: '',
+                                message: '',
+                            }}
+                            validationSchema={gerarLinkSchema}
+                            onSubmit={async (values) => {
 
-                        const response = await generateLink(values);
-                        const { id, link_base, link_code, original, shortened } = response.data;
-                        setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base, link_code })
-                        storeLink(id);
-                    }}
-                >
-                    {({ errors, touched, isSubmitting, dirty }) => (
-                        <Form>
-                            <div className="row justify-content-center mt-3 mt-md-4">
-                                <div className="col-12 col-md-6">
+                                const response = await generateLink(values);
+                                const { id, link_base, link_code, original, shortened } = response.data;
+                                setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base, link_code })
+                                storeLink(id);
+                            }}
+                        >
+                            {({ errors, touched, isSubmitting, dirty }) => (
+                                <Form>
                                     <div className="form-group mb-0 d-flex">
                                         <div className="flex-shrink-1 pr-3">
                                             <Field name="countryCode">
@@ -107,31 +111,34 @@ export default function Home() {
                                     <div className="d-flex justify-content-center">
                                         <button type="submit" className={`btn btn-${link_generated.link_shortened ? 'dark' : 'success'} btn-generate-link font-weight-bold w-100`} disabled={isSubmitting}>{isSubmitting ? 'Gerando link encurtado...' : link_generated.link_shortened ? 'Gerar novamente' : 'Gerar Link'}</button>
                                     </div>
+                                </Form>
+                            )}
+                        </Formik>
+                        {link_generated.link_shortened &&
+                            <div className="row justify-content-center my-4">
+                                <div className="col-12 col-md-6">
+                                    <span className="d-block text-center h5">Link gerado 🔗</span>
+                                    <div className="form-group">
+                                        <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copied ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
+                                            {link_generated.link_shortened}
+                                            <MdContentCopy className="icon" />
+                                        </div>
+                                        <div className="d-flex justify-content-center mt-3">
+                                            <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copiado 😉' : 'Copiar'}</button>
+                                            <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
+                                        </div>
+                                    </div>
+                                    <div className="py-3">
+                                        <QrCode link={link_generated.link_shortened} />
+                                    </div>
                                 </div>
                             </div>
-                        </Form>
-                    )}
-                </Formik>
-                {link_generated.link_shortened &&
-                    <div className="row justify-content-center my-4">
-                        <div className="col-12 col-md-6">
-                            <span className="d-block text-center h5">Link gerado 🔗</span>
-                            <div className="form-group">
-                                <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copied ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
-                                    {link_generated.link_shortened}
-                                    <MdContentCopy className="icon" />
-                                </div>
-                                <div className="d-flex justify-content-center mt-3">
-                                    <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copiado 😉' : 'Copiar'}</button>
-                                    <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
-                                </div>
-                            </div>
-                            <div className="py-3">
-                                <QrCode link={link_generated.link_shortened} />
-                            </div>
-                        </div>
+                        }
                     </div>
-                }
+                    <div className="col-12 col-md-3 order-3 order-md-3">
+                        <AdsRight />
+                    </div>
+                </div>
             </div>
             <section className="container mt-5 p-0 text-center">
                 <h2 className="font-weight-normal h6">Está com dúvidas ou quer dicas de uso? </h2>
