@@ -49,7 +49,7 @@ export default function Home() {
                 </Head>
                 <Header />
                 <div className="row justify-content-center">
-                    <div className="col-12 col-md-3 order-2 order-md-1">
+                    <div className="col-12 col-md-3 order-2 order-md-1 mt-5 mt-md-0">
                         <AdsLeft />
                     </div>
                     <div className="col-12 col-md-6 order-1 order-md-2">
@@ -139,7 +139,7 @@ export default function Home() {
                             <p>Visite a nossa seção <Link href="/como-usar"><a className="text-primary font-weight-bold">Como usar</a></Link></p>
                         </section>
                     </div>
-                    <div className="col-12 col-md-3 order-3 order-md-3">
+                    <div className="col-12 col-md-3 order-3 order-md-3 mt-5 mt-md-0">
                         <AdsRight />
                     </div>
                 </div>
