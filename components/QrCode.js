@@ -26,17 +26,13 @@ function Qrcode({ link }) {
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        QRCode.toCanvas(canvasRef.current, link, { ...qrcode_options, scale: null, width: 250 }, error => {
-            // if (error) {
-            //     console.log(error);
-            // }
-        });
+        QRCode.toCanvas(canvasRef.current, link, { ...qrcode_options, scale: null, width: 250 }, error => {});
     });
 
     return (
         <div className="d-flex flex-column align-items-center">
+            <button className="btn btn-dark mb-3 font-weight-bold btn-qrcode-download px-5" onClick={downloadQrcode}>Baixar QR Code</button>
             <canvas ref={canvasRef}></canvas>
-            <button className="btn btn-dark mt-3 font-weight-bold btn-qrcode-download px-5" onClick={downloadQrcode}>Baixar QR Code</button>
         </div>
     )
 }
