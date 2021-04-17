@@ -9,7 +9,7 @@ module.exports = withPWA({
         runtimeCaching,
         sw: 'service-worker.js',
     },
-    webpack: (config, options) => {
+    webpack: (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
             '@': path.resolve(__dirname, './')
