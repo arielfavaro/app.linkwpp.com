@@ -12,7 +12,7 @@ import QrCode from '@/components/QrCode';
 import { countryMask, numberMask } from "@/lib/masks";
 import generateLink from "@/services/generateLink";
 import FieldError from '@/components/FieldError';
-import { AdsLeft, AdsRight } from '@/components/Ads';
+import { Ads } from '@/components/Ads';
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
@@ -48,11 +48,11 @@ export default function Home() {
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 </Head>
                 <Header />
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-3 order-2 order-md-1 mt-5 mt-md-0">
-                        <AdsLeft />
+                <div className="row justify-content-between">
+                    <div className="col-12 col-md-3 col-lg-3 order-2 order-md-1 mt-5 mt-md-0">
+                        <Ads client="ca-pub-3150319769695783" slot="6780362663" />
                     </div>
-                    <div className="col-12 col-md-6 order-1 order-md-2">
+                    <div className="col-12 col-md-6 col-lg-5 order-1 order-md-2">
                         <Formik
                             initialValues={{
                                 countryCode: '+55',
@@ -139,8 +139,8 @@ export default function Home() {
                             <p>Visite a nossa seção <Link href="/como-usar"><a className="text-primary font-weight-bold">Como usar</a></Link></p>
                         </section>
                     </div>
-                    <div className="col-12 col-md-3 order-3 order-md-3 mt-5 mt-md-0">
-                        <AdsRight />
+                    <div className="col-12 col-md-3 col-lg-3 order-3 order-md-3 mt-5 mt-md-0">
+                        <Ads client="ca-pub-3150319769695783" slot="7320586004" />
                     </div>
                 </div>
             </div>
