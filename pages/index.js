@@ -115,22 +115,20 @@ export default function Home() {
                             )}
                         </Formik>
                         {link_generated.link_shortened &&
-                            <div className="row justify-content-center my-4">
-                                <div className="col-12 col-md-6">
-                                    <span className="d-block text-center h5">Link gerado 🔗</span>
-                                    <div className="form-group">
-                                        <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copied ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
-                                            {link_generated.link_shortened}
-                                            <MdContentCopy className="icon" />
-                                        </div>
-                                        <div className="d-flex justify-content-center mt-3">
-                                            <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copiado 😉' : 'Copiar'}</button>
-                                            <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
-                                        </div>
+                            <div className="my-4">
+                                <span className="d-block text-center h5">Link gerado 🔗</span>
+                                <div className="form-group">
+                                    <div className={`form-control h-auto generated-link copy-link no-resize text-truncate text-center ${link_generated.copied ? 'copied-link' : ''}`} onClick={() => copiarLink()}>
+                                        {link_generated.link_shortened}
+                                        <MdContentCopy className="icon" />
                                     </div>
-                                    <div className="py-3">
-                                        <QrCode link={link_generated.link_shortened} />
+                                    <div className="d-flex justify-content-center mt-3">
+                                        <button className={`btn btn-${link_generated.copied ? 'dark' : 'success'} px-3 px-md-5 copy-link mx-2 font-weight-bold`} onClick={() => copiarLink()}>{link_generated.copied ? 'Link copiado 😉' : 'Copiar'}</button>
+                                        <a className='btn btn-dark font-weight-bold px-3 px-md-5 mx-2' href={link_generated.link_shortened} target="_blank" rel="noreferrer">Abrir</a>
                                     </div>
+                                </div>
+                                <div className="py-3">
+                                    <QrCode link={link_generated.link_shortened} />
                                 </div>
                             </div>
                         }
