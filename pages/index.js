@@ -44,7 +44,7 @@ export default function Home() {
             <div className="container main p-0">
                 <Head>
                     <title key="title">Gerador de Link para WhatsApp</title>
-                    <meta key="description" name="description" content="Crie link encurtado para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes." />
+                    <meta key="description" name="description" content="Crie link curto para WhatsApp com QR Code e compartilhe nas redes sociais. Link com mensagem personalizada para WhatsApp. Utilize o link encurtado para WhatsApp em suas postagens, Facebook, Instagram." />
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 </Head>
                 <Header />
