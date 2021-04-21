@@ -4,7 +4,7 @@ function Ads({ client, slot, name }) {
 
     useEffect(() => {
         console.log('ads push');
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        (window.adsbygoogle || []).push({});
     }, [name]);
 
     return (
