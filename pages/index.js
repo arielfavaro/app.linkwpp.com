@@ -50,7 +50,7 @@ export default function Home() {
                 <Header />
                 <div className="row justify-content-between">
                     <div className="col-12 col-md-3 col-lg-3 order-2 order-md-1 mt-5 mt-md-0">
-                        <Ads client="ca-pub-3150319769695783" slot="6780362663" />
+                        <Ads client="ca-pub-3150319769695783" slot="6780362663" name="home-1" />
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 order-1 order-md-2">
                         <Formik
@@ -140,7 +140,7 @@ export default function Home() {
                         </section>
                     </div>
                     <div className="col-12 col-md-3 col-lg-3 order-3 order-md-3 mt-5 mt-md-0">
-                        <Ads client="ca-pub-3150319769695783" slot="7320586004" />
+                        <Ads client="ca-pub-3150319769695783" slot="7320586004" name="home-2" />
                     </div>
                 </div>
             </div>
