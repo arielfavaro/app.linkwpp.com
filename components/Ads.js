@@ -3,6 +3,7 @@ import { useEffect } from "react";
 function Ads({ client, slot, name }) {
 
     useEffect(() => {
+        console.log('ads push');
         (window.adsbygoogle || []).push({});
     }, [name]);
 
