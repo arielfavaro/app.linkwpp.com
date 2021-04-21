@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "@/components/Header";
 import questions from "@/lib/questions";
+import { Ads } from "../../components/Ads";
 
 function ComoUsar() {
 
@@ -40,8 +41,11 @@ function ComoUsar() {
                 </Head>
                 <Header title={<>Como <span className="text-primary">usar</span></>} description="Confira nossas dicas e veja como gerar um link para WhatsApp" />
 
-                <section className="row justify-content-center">
-                    <div className="col-12 col-md-8">
+                <section className="row justify-content-between">
+                    <div className="col-12 col-md-3 col-lg-3 order-2 order-md-1 mt-5 mt-md-0">
+                        <Ads client="ca-pub-3150319769695783" slot="6780362663" name="como-usar-1" />
+                    </div>
+                    <div className="col-12 col-md-6 col-lg-6 order-1 order-md-2">
                         <article className="rounded bg-secondary px-3 py-3">
                             <ul className="list-unstyled">
                                 {questions.map((question, index) => {
@@ -54,6 +58,9 @@ function ComoUsar() {
                                 })}
                             </ul>
                         </article>
+                    </div>
+                    <div className="col-12 col-md-3 col-lg-3 order-3 order-md-3 mt-5 mt-md-0">
+                        <Ads client="ca-pub-3150319769695783" slot="7320586004" name="como-usar-2" />
                     </div>
                 </section>
                 <section className="container mt-5 p-0 text-center">
