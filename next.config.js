@@ -8,6 +8,7 @@ module.exports = withPWA({
         dest: 'public',
         runtimeCaching,
         sw: 'service-worker.js',
+        disable: process.env.NODE_ENV === 'development',
     },
     webpack: (config) => {
         config.resolve.alias = {
