@@ -54,7 +54,7 @@ function MyLinks() {
                                                 <p className="h6">+{link.phone_country_code} {link.phone_number}</p>
                                                 <p className="h6 font-weight-normal">{link.message}</p>
                                                 <div className="border-bottom border-dark"></div>
-                                                <a className="rounded mb-0 my-2 text-white d-block" target="_blank" href={`https://linkwpp.com/w/${link.code}`}>https://linkwpp.com/w/{link.code}</a>
+                                                <a className="rounded mb-0 my-2 text-white d-block" target="_blank" href={`${link.base}/w/${link.code}`}>{`${link.base}/w/${link.code}`}</a>
                                             </div>
                                             <div className="col-12 col-md-3">
                                                 <span className="d-block mb-2">Acessos: <span className="font-weight-bold text-primary h5">{link.opens_count}</span></span>

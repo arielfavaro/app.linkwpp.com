@@ -63,8 +63,8 @@ export default function Home() {
                             onSubmit={async (values) => {
 
                                 const response = await generateLink(values);
-                                const { id, link_base, link_code, original, shortened } = response.data;
-                                setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base, link_code })
+                                const { id, base, code, original, shortened } = response.data;
+                                setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base: base, link_code: code })
                                 storeLink(id);
                             }}
                         >
