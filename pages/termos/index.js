@@ -6,14 +6,14 @@ function Termos() {
     return (
         <div className="container mb-3">
             <Head>
-                <title key="title">Termos de Uso - Gerador de Link para WhatsApp</title>
+                <title key="title">Termos - Gerador de Link para WhatsApp</title>
                 <meta key="description" name="description" content="Estes Termos de Serviço regem seu acesso e uso de nossos serviços." />
                 <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/termos" />
             </Head>
             <Header />
 
             <div className="bg-secondary p-3 p-md-4 rounded mt-4">
-                <h2>Termos de Uso</h2>
+                <h2>Termos de Serviço</h2>
 
                 <p>Estes Termos de Serviço regem seu acesso e uso de nossos serviços.</p>
 

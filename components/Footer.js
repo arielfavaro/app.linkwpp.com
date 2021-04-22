@@ -6,7 +6,7 @@ function Footer() {
         <footer className="container-fluid mt-5 py-3 py-md-4 bg-secondary">
             <div className="d-flex align-items-center justify-content-center pb-2">
                 <Link href="/politica-privacidade"><a className="mx-2">Política de Privacidade</a></Link>
-                <Link href="/termos"><a className="mx-2">Termos de Uso</a></Link>
+                <Link href="/termos"><a className="mx-2">Termos</a></Link>
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
                 <span className="small d-block">Versão: 0.2.0</span>
