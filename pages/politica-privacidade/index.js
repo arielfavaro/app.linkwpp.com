@@ -11,11 +11,8 @@ function PoliticaPrivacidade() {
                 <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/politica-privacidade" />
             </Head>
             <Header />
-            <div className="d-flex justify-content-center justify-content-md-start mt-3 mt-md-4">
-                <Link href="/"><a className="btn btn-success font-weight-bold text-white">Início</a></Link>
-            </div>
 
-            <div className="bg-secondary p-3 p-md-4 rounded mt-3">
+            <div className="bg-secondary p-3 p-md-4 rounded mt-4">
                 <h2>Política de Privacidade</h2>
                 <p>A sua privacidade é importante para nós. Respeitamos a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://geradorlinkwhatsapp.com/">Gerador de Link para WhatsApp</a>, e outros sites que possuímos e operamos.</p>
                 <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
@@ -120,7 +117,7 @@ function PoliticaPrivacidade() {
 
                 <p>Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</p>
 
-                <p>Esta política é efetiva a partir de <strong>Março</strong>/<strong>2021</strong>.</p>
+                <p>Última alteração: Março/2021</p>
 
             </div>
         </div>
