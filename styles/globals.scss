@@ -50,21 +50,10 @@ html::-webkit-scrollbar-track {
 
 .main {
     // min-height: calc(100vh - 150px);
-    // min-height: 70vh;
+    min-height: 100vh;
 
     .field-error {
         min-height: 25px;
-    }
-}
-
-.howto {
-    .list {
-        .number {
-            font-size: 5rem;
-            font-weight: 700;
-            color: $light;
-            text-shadow: 4px 5px 0 var(--primary);
-        }
     }
 }
 
