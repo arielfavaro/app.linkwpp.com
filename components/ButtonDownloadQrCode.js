@@ -1,7 +1,6 @@
 import QRCode from "qrcode";
-import { useEffect, useRef } from "react";
 
-function Qrcode({ link, code }) {
+function ButtonDownloadQrCode({ link, code }) {
 
     let qrcode_options = {
         errorCorrectionLevel: 'M',
@@ -23,18 +22,11 @@ function Qrcode({ link, code }) {
         });
     }
 
-    const canvasRef = useRef(null);
-
-    useEffect(() => {
-        QRCode.toCanvas(canvasRef.current, link, { ...qrcode_options, scale: null, width: 250 }, error => { });
-    });
-
     return (
-        <div className="d-flex flex-column align-items-center">
-            <button className="btn btn-dark mb-3 font-weight-bold btn-qrcode-download px-5" onClick={downloadQrcode}>Baixar QR Code</button>
-            <canvas ref={canvasRef}></canvas>
+        <div className="d-flex flex-column align-items-center mt-3">
+            <button className="btn btn-dark btn-sm px-3 font-weight-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
         </div>
     )
 }
 
-export default Qrcode;
+export default ButtonDownloadQrCode;

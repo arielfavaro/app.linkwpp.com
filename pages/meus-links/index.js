@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import myPublicLinks from "@/services/myPublicLinks";
 import PulseLoader from "react-spinners/PulseLoader";
 import { Ads } from "../../components/Ads";
+import ButtonDownloadQrCode from "../../components/ButtonDownloadQrCode";
 
 function MyLinks() {
 
@@ -49,17 +50,20 @@ function MyLinks() {
                             (
                                 <ul className="list-unstyled">
                                     {links.map((link) => (
-                                        <li className="bg-secondary py-3 mb-3 rounded-sm row align-items-center justify-content-between text-center text-md-left" key={link.uuid}>
-                                            <div className="flex-fill pr-3 col-12 col-md-9">
-                                                <p className="h6">+{link.phone_country_code} {link.phone_number}</p>
-                                                <p className="h6 font-weight-normal">{link.message}</p>
-                                                <div className="border-bottom border-dark"></div>
-                                                <a className="rounded mb-0 my-2 text-white d-block" target="_blank" href={`${link.base}/w/${link.code}`}>{`${link.base}/w/${link.code}`}</a>
+                                        <li className="bg-secondary py-3 mb-3 rounded-sm" key={link.uuid}>
+                                            <div className="row m-0 align-items-center justify-content-between text-center text-md-left">
+                                                <div className="flex-fill pr-3 col-12 col-md-9">
+                                                    <p className="h6">+{link.phone_country_code} {link.phone_number}</p>
+                                                    <p className="h6 font-weight-normal">{link.message}</p>
+                                                    <div className="border-bottom border-dark"></div>
+                                                    <a className="rounded mb-0 my-2 text-white d-block" target="_blank" href={`${link.base}/w/${link.code}`}>{`${link.base}/w/${link.code}`}</a>
+                                                </div>
+                                                <div className="col-12 col-md-3">
+                                                    <span className="d-block mb-2">Acessos: <span className="font-weight-bold text-primary h5">{link.opens_count}</span></span>
+                                                    <span>Criado em: {new Date(Date.parse(link.created_at)).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}</span>
+                                                </div>
                                             </div>
-                                            <div className="col-12 col-md-3">
-                                                <span className="d-block mb-2">Acessos: <span className="font-weight-bold text-primary h5">{link.opens_count}</span></span>
-                                                <span>Criado em: {new Date(Date.parse(link.created_at)).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}</span>
-                                            </div>
+                                            <ButtonDownloadQrCode link={`${link.base}/w/${link.code}`} code={link.code} />
                                         </li>
                                     ))}
                                 </ul>

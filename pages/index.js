@@ -128,7 +128,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="py-3">
-                                    <QrCode link={link_generated.link_shortened} />
+                                    <QrCode link={link_generated.link_shortened} code={link_generated.link_code} />
                                 </div>
                             </div>
                         }
