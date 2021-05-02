@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,user-scalable=yes" />
-                <meta key="description" name="description" content="Crie link curto para WhatsApp com QR Code e compartilhe nas redes sociais. Link com mensagem personalizada para WhatsApp. Utilize o link encurtado para WhatsApp em suas postagens, Facebook, Instagram." />
+                <meta key="description" name="description" content="Crie link curto para WhatsApp com QR Code com o gerador de links para o WhatsApp e compartilhe nas redes sociais. Link com mensagem personalizada para WhatsApp. Utilize o link curto para WhatsApp em suas postagens, Facebook, Instagram." />
                 <meta key="keywords" name="keywords" content="link whatsapp, links, link do whatsapp, gerador de link whatsapp, gerar link whatsapp, gerador de link, gerador link whatsapp, criar link whatsapp, links de whatsapp, qrcode whatsapp, link qrcode, criar qrcode whatsapp" />
                 <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/" />
                 <link rel="icon" href="/favicon.ico" />
