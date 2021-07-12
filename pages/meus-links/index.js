@@ -35,9 +35,8 @@ function MyLinks() {
             <div className="container main p-0">
                 <Head>
                     <title key="title">Meus Links - Gerador de Link para WhatsApp</title>
-                    <meta key="description" name="description" content="Meus links" />
+                    <meta key="description" name="description" content="Visualizar quantidade de acessos, copiar o link novamente e baixar o QrCode." />
                     <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/meus-links" />
-                    <meta name="robots" content="noindex, nofollow" />
                 </Head>
                 <Header title={<>Meus <span className="text-primary">links</span></>} description={<><span className="d-block mb-3">Meus links gerados</span><span className="small">Em breve você poderá fazer login em nossa plataforma para acompanhar as estatísticas com mais detalhes</span></>} />
 
