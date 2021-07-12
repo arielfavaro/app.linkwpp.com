@@ -23,9 +23,7 @@ function ButtonDownloadQrCode({ link, code }) {
     }
 
     return (
-        <div className="d-flex flex-column align-items-center mt-3">
-            <button className="btn btn-dark btn-sm px-3 font-weight-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
-        </div>
+        <button className="btn btn-dark btn-sm px-3 font-weight-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
     )
 }
 
