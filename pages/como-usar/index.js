@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "@/components/Header";
 import questions from "@/lib/questions";
-import { Ads } from "../../components/Ads";
+import { Ads } from "@/components/Ads";
 
 function ComoUsar() {
 
