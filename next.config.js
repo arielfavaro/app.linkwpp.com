@@ -3,7 +3,6 @@ const runtimeCaching = require('next-pwa/cache')
 const path = require('path')
 
 module.exports = withPWA({
-    future: { webpack5: true },
     pwa: {
         dest: 'public',
         runtimeCaching,
@@ -11,10 +10,7 @@ module.exports = withPWA({
         disable: process.env.NODE_ENV === 'development',
     },
     webpack: (config) => {
-        config.resolve.alias = {
-            ...config.resolve.alias,
-            '@': path.resolve(__dirname, './')
-        }
+        config.resolve.alias['@'] = path.resolve(__dirname, './')
         return config
     },
 })
