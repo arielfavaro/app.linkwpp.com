@@ -1,33 +1,38 @@
-import Head from "next/head";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import myPublicLinks from "@/services/myPublicLinks";
-import PulseLoader from "react-spinners/PulseLoader";
-import { Ads } from "@/components/Ads";
-import ButtonDownloadQrCode from "@/components/ButtonDownloadQrCode";
-import copy from "copy-to-clipboard";
+import Head from 'next/head'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import Header from '@/components/Header'
+import myPublicLinks from '@/services/myPublicLinks'
+import PulseLoader from 'react-spinners/PulseLoader'
+import { Ads } from '@/components/Ads'
+import ButtonDownloadQrCode from '@/components/ButtonDownloadQrCode'
+import copy from 'copy-to-clipboard'
 
-function MyLinks() {
+export default function MyLinks() {
 
-    const [links, setLinks] = useState([]);
-    const [is_empty, setEmpty] = useState(false);
-    const [is_loading, setLoading] = useState(true);
-    const [last_copied_link, setLastCopiedLink] = useState('');
+    const [links, setLinks] = useState([])
+    const [is_empty, setEmpty] = useState(false)
+    const [is_loading, setLoading] = useState(true)
+    const [last_copied_link, setLastCopiedLink] = useState('')
 
-    useEffect(async () => {
+    useEffect(() => {
         const storage_links = JSON.parse(localStorage.getItem('geradorlinkwhatsapp.links'));
-        if (storage_links) {
-            const { data } = await myPublicLinks(storage_links);
-            setLinks(data);
-        }
-        setEmpty(!storage_links);
-        setLoading(false);
-    }, []);
+
+        (async () => {
+            if (storage_links) {
+                const { data } = await myPublicLinks(storage_links)
+                setLinks(data)
+            }
+            setEmpty(!storage_links) // TODO wtf is this??
+            setLoading(false)
+        })()
+
+
+    }, [])
 
     const copiarLink = (link, uuid) => {
-        copy(link);
-        setLastCopiedLink(uuid);
+        copy(link)
+        setLastCopiedLink(uuid)
     }
 
     return (
@@ -62,7 +67,7 @@ function MyLinks() {
                                                     <p className="h6">+{link.phone_country_code} {link.phone_number}</p>
                                                     <p className="h6 font-weight-normal">{link.message}</p>
                                                     <div className="border-bottom border-dark"></div>
-                                                    <a className="rounded mb-0 my-2 text-white d-block" target="_blank" href={`${link.base}/w/${link.code}`}>{`${link.base}/w/${link.code}`}</a>
+                                                    <a className="rounded mb-0 my-2 text-white d-block" target="_blank" rel="noreferrer" href={`${link.base}/w/${link.code}`}>{`${link.base}/w/${link.code}`}</a>
                                                 </div>
                                                 <div className="col-12 col-md-3">
                                                     <span className="d-block mb-2">Acessos: <span className="font-weight-bold text-primary h5">{link.opens_count}</span></span>
@@ -89,5 +94,3 @@ function MyLinks() {
         </div >
     )
 }
-
-export default MyLinks;

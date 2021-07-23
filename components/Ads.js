@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 function Ads({ client, slot, name }) {
 
     useEffect(() => {
-        console.log('ads push');
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }, [name]);
+        console.log('ads push')
+        window.adsbygoogle = window.adsbygoogle || [].push({})
+    }, [name])
 
     return (
         <div key={name}>
@@ -19,4 +19,4 @@ function Ads({ client, slot, name }) {
     )
 }
 
-export { Ads };
+export { Ads }

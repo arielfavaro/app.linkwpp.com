@@ -1,0 +1,20 @@
+.wrapper {
+    @apply text-center flex flex-col items-center;
+}
+
+.title {
+    @apply pt-3 lg:pt-4 font-bold text-3xl lg:text-4xl xl:text-5xl
+}
+
+.highlight {
+    @apply block;
+
+    span {
+        @apply text-primary;
+    }
+}
+
+.description {
+    @apply my-4 lg:mt-6 font-normal;
+    max-width: 370px;
+}

@@ -1,11 +1,11 @@
-import { Field, Form, Formik } from "formik";
-import Head from "next/head";
-import FieldError from "@/components/FieldError";
-import Header from "@/components/Header";
-import sendContato from "@/services/sendContato";
-import * as Yup from 'yup';
-import { numberMask } from "@/lib/masks";
-import MaskedInput from "react-text-mask";
+import { Field, Form, Formik } from 'formik'
+import Head from 'next/head'
+import FieldError from '@/components/FieldError'
+import Header from '@/components/Header'
+import sendContato from '@/services/sendContato'
+import * as Yup from 'yup'
+import { numberMask } from '@/lib/masks'
+import MaskedInput from 'react-text-mask'
 
 const sendContatoSchema = Yup.object().shape({
     email: Yup.string()
@@ -24,9 +24,9 @@ const sendContatoSchema = Yup.object().shape({
     phone_number: Yup.string()
         .max(50, 'Máximo 50 caracteres'),
     message: Yup.string().required('Digite sua mensagem').max(250, 'Máximo de 250 caracteres'),
-});
+})
 
-function Contato() {
+export default function Contato() {
     return (
         <div className="container-fluid">
             <div className="container main p-0">
@@ -48,10 +48,10 @@ function Contato() {
                     }}
                     validationSchema={sendContatoSchema}
                     onSubmit={async (values, actions) => {
-                        const result = await sendContato(values);
+                        const result = await sendContato(values)
 
                         if (result.status == 201) {
-                            actions.resetForm({});
+                            actions.resetForm({})
                             actions.setStatus({ success: true })
                         }
                     }}
@@ -124,8 +124,6 @@ function Contato() {
                     )}
                 </Formik>
             </div>
-        </div >
+        </div>
     )
 }
-
-export default Contato;

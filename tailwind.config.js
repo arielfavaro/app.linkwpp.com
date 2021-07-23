@@ -4,7 +4,7 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
-            'sans': ['Roboto', 'sans-serif'],
+            'sans': ['Poppins', 'sans-serif'],
         },
         extend: {
             colors: {
@@ -15,6 +15,12 @@ module.exports = {
                     DEFAULT: '#13171d',
                     foreground: '#232a3a',
                 },
+            },
+        },
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '.75rem',
             },
         },
     },

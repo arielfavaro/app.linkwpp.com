@@ -1,6 +1,6 @@
-import QRCode from "qrcode";
+import QRCode from 'qrcode'
 
-function ButtonDownloadQrCode({ link, code }) {
+export default function ButtonDownloadQrCode({ link, code }) {
 
     let qrcode_options = {
         errorCorrectionLevel: 'M',
@@ -14,17 +14,15 @@ function ButtonDownloadQrCode({ link, code }) {
     function downloadQrcode() {
         QRCode.toDataURL(link, qrcode_options, (err, url) => {
 
-            let qrcode_image = document.createElement('a');
-            qrcode_image.href = url;
-            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`;
-            qrcode_image.click();
+            let qrcode_image = document.createElement('a')
+            qrcode_image.href = url
+            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`
+            qrcode_image.click()
 
-        });
+        })
     }
 
     return (
         <button className="btn btn-dark btn-sm px-3 font-weight-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
     )
 }
-
-export default ButtonDownloadQrCode;

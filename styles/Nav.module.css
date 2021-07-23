@@ -1,0 +1,11 @@
+.wrapper {
+    @apply container border border-t-0 border-l-0 border-r-0 border-gray-500 py-2 lg:py-4;
+    @apply flex flex-col lg:flex-row justify-between items-center;
+}
+
+.links {
+    @apply flex gap-x-3 text-center;
+    a {
+        @apply text-white hover:text-primary;
+    }
+}

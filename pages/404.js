@@ -1,7 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Header from "@/components/Header";
-// import Image from 'next/image';
+import Head from 'next/head'
+import Link from 'next/link'
+import Header from '@/components/Header'
 
 export default function Custom404() {
     return (
@@ -20,5 +19,5 @@ export default function Custom404() {
                 <Link href="/"><a className="btn btn-success font-weight-bold text-uppercase">Voltar</a></Link>
             </div>
         </div>
-    );
+    )
 }

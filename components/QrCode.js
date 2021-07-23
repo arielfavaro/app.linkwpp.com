@@ -1,7 +1,7 @@
-import QRCode from "qrcode";
-import { useEffect, useRef } from "react";
+import QRCode from 'qrcode'
+import { useEffect, useRef } from 'react'
 
-function Qrcode({ link, code }) {
+export default function Qrcode({ link, code }) {
 
     let qrcode_options = {
         errorCorrectionLevel: 'M',
@@ -15,19 +15,19 @@ function Qrcode({ link, code }) {
     function downloadQrcode() {
         QRCode.toDataURL(link, qrcode_options, (err, url) => {
 
-            let qrcode_image = document.createElement('a');
-            qrcode_image.href = url;
-            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`;
-            qrcode_image.click();
+            let qrcode_image = document.createElement('a')
+            qrcode_image.href = url
+            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`
+            qrcode_image.click()
 
-        });
+        })
     }
 
-    const canvasRef = useRef(null);
+    const canvasRef = useRef(null)
 
     useEffect(() => {
-        QRCode.toCanvas(canvasRef.current, link, { ...qrcode_options, scale: null, width: 250 }, error => { });
-    });
+        QRCode.toCanvas(canvasRef.current, link, { ...qrcode_options, scale: null, width: 250 }, error => { })
+    })
 
     return (
         <div className="d-flex flex-column align-items-center">
@@ -36,5 +36,3 @@ function Qrcode({ link, code }) {
         </div>
     )
 }
-
-export default Qrcode;

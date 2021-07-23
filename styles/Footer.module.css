@@ -1,0 +1,11 @@
+.wrapper {
+    @apply mt-4 py-4 bg-dark-foreground;
+}
+
+.links {
+    @apply flex items-center justify-center pb-4;
+}
+
+.version {
+    @apply flex flex-col items-center justify-center text-sm;
+}

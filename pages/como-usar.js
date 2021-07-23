@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Link from "next/link";
-import Header from "@/components/Header";
-import questions from "@/lib/questions";
-import { Ads } from "@/components/Ads";
+import Head from 'next/head'
+import Link from 'next/link'
+import Header from '@/components/Header'
+import questions from '@/lib/questions'
+import { Ads } from '@/components/Ads'
 
-function ComoUsar() {
+export default function ComoUsar() {
 
     const mapped_questions = () => {
         return questions.map(question => {
@@ -16,8 +16,8 @@ function ComoUsar() {
                         "@type": "Answer",
                         "text": "${question.answer}"
                     }
-                }`;
-        });
+                }`
+        })
     }
 
     return (
@@ -71,5 +71,3 @@ function ComoUsar() {
         </div>
     )
 }
-
-export default ComoUsar;
