@@ -31,7 +31,7 @@ export default function FormLink() {
     }
 
     const storeLink = (id) => {
-        const previous = JSON.parse(localStorage.getItem('geradorlinkwhats.links')) || []
+        const previous = JSON.parse(localStorage.getItem('linkwpp.links')) || []
         localStorage.setItem('linkwpp.links', JSON.stringify([...previous, id]))
     }
 
