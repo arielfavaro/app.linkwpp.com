@@ -7,8 +7,8 @@ export default function Custom404() {
     return (
         <div className="container">
             <Head>
-                <title key="title">404 - Gerador de Link para WhatsApp</title>
-                <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/404" />
+                <title key="title">404 - Gerador de Link para whats</title>
+                <link key="canonical" rel="canonical" href="https://app.linkwpp.com/404" />
             </Head>
             <Header />
             <h1 className="text-center my-5 text-danger display-2 font-weight-bold">404</h1>

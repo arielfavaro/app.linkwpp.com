@@ -16,7 +16,7 @@ function MyLinks() {
     const [last_copied_link, setLastCopiedLink] = useState('');
 
     useEffect(async () => {
-        const storage_links = JSON.parse(localStorage.getItem('geradorlinkwhatsapp.links'));
+        const storage_links = JSON.parse(localStorage.getItem('linkwpp.links'));
         if (storage_links) {
             const { data } = await myPublicLinks(storage_links);
             setLinks(data);
@@ -34,9 +34,9 @@ function MyLinks() {
         <div className="container-fluid">
             <div className="container main p-0">
                 <Head>
-                    <title key="title">Meus Links - Gerador de Link para WhatsApp</title>
+                    <title key="title">Meus Links - Gerador de Link para whats</title>
                     <meta key="description" name="description" content="Visualizar quantidade de acessos, copiar o link novamente e baixar o QrCode." />
-                    <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/meus-links" />
+                    <link key="canonical" rel="canonical" href="https://app.linkwpp.com/meus-links" />
                 </Head>
                 <Header title={<>Meus <span className="text-primary">links</span></>} description={<><span className="d-block mb-3">Meus links gerados</span><span className="small">Em breve você poderá fazer login em nossa plataforma para acompanhar as estatísticas com mais detalhes</span></>} />
 

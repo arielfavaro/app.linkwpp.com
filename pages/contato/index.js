@@ -31,9 +31,9 @@ function Contato() {
         <div className="container-fluid">
             <div className="container main p-0">
                 <Head>
-                    <title key="title">Contato - Gerador de Link para WhatsApp</title>
+                    <title key="title">Contato - Gerador de Link para whats</title>
                     <meta key="description" name="description" content="Envie sua mensagem para nós, sugestões ou dúvidas." />
-                    <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/contato" />
+                    <link key="canonical" rel="canonical" href="https://app.linkwpp.com/contato" />
                 </Head>
                 <Header title={<>Entre em <span className="text-primary">contato</span></>} description={<>Envie sua mensagem para nós, <span className="d-block">sugestões ou dúvidas.</span></>} />
 
