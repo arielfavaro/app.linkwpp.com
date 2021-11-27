@@ -21,8 +21,7 @@ export default class MyDocument extends Document {
                     />
                     {/* End Google Tag Manager */}
 
-                    <script data-ad-client={`${GA_ADS_ID}`} async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+                    <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GA_ADS_ID}`} crossOrigin="anonymous"></script>
                 </Head>
                 <body>
 
