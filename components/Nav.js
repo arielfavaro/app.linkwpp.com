@@ -6,7 +6,7 @@ export default function Nav() {
         <nav className={styles.wrapper}>
             <Link href="/">
                 <a className="mb-2 lg:mb-0">
-                    <img src="/icons/icon192.png" title="Gerador de Link para Whats" alt="Logo" width="40" />
+                    <img src="/icons/icon192.png" title="Gerador de Link para whats" alt="Logo" width="40" />
                 </a>
             </Link>
             <div className={styles.links}>

@@ -38,7 +38,7 @@ export default function MyLinks() {
     return (
         <div className="container main p-0">
             <Head>
-                <title key="title">Meus Links - Gerador de Link para Whats</title>
+                <title key="title">Meus Links - Gerador de Link para whats</title>
                 <meta key="description" name="description" content="Visualizar quantidade de acessos, copiar o link novamente e baixar o QrCode." />
                 <link key="canonical" rel="canonical" href="https://app.linkwpp.com/meus-links" />
             </Head>

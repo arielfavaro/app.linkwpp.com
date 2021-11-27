@@ -25,8 +25,8 @@ export default function ComoUsar() {
 
         <div className="container">
             <Head>
-                <title key="title">Como usar - Gerador de Link para Whats</title>
-                <meta key="description" name="description" content="Confira nossas dicas e veja como gerar um link para Whats" />
+                <title key="title">Como usar - Gerador de Link para whats</title>
+                <meta key="description" name="description" content="Confira nossas dicas e veja como gerar um link para whats" />
                 <link key="canonical" rel="canonical" href="https://app.linkwpp.com/como-usar" />
                 <script type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -39,7 +39,7 @@ export default function ComoUsar() {
                     }}>
                 </script>
             </Head>
-            <Header title={<>Como <span className="text-primary">usar</span></>} description="Confira nossas dicas e veja como gerar um link para Whats" />
+            <Header title={<>Como <span className="text-primary">usar</span></>} description="Confira nossas dicas e veja como gerar um link para whats" />
 
             <div className={styles.main}>
                 <section className={styles.wrapper}>

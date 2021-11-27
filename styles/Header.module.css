@@ -3,15 +3,11 @@
 }
 
 .title {
-    @apply pt-3 lg:pt-4 font-bold text-3xl lg:text-4xl xl:text-5xl
+    @apply pt-3 lg:pt-4 font-bold text-3xl lg:text-4xl xl:text-5xl max-w-md;
 }
 
 .highlight {
-    @apply block;
-
-    span {
-        @apply text-primary;
-    }
+    @apply text-primary;
 }
 
 .description {

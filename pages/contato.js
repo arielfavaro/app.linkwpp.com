@@ -31,7 +31,7 @@ export default function Contato() {
         <div className="container-fluid">
             <div className="container main p-0">
                 <Head>
-                    <title key="title">Contato - Gerador de Link para Whats</title>
+                    <title key="title">Contato - Gerador de Link para whats</title>
                     <meta key="description" name="description" content="Envie sua mensagem para nós, sugestões ou dúvidas." />
                     <link key="canonical" rel="canonical" href="https://app.linkwpp.com/contato" />
                 </Head>

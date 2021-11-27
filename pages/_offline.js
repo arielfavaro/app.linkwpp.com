@@ -6,8 +6,8 @@ export default function Offline() {
         <div className="container-fluid">
             <div className="container main p-0">
                 <Head>
-                    <title key="title">Gerador de Link para Whats</title>
-                    <meta key="description" name="description" content="Crie link curto para Whats com QR Code com o gerador de links para o Whats e compartilhe nas redes sociais. Link com mensagem personalizada para Whats. Utilize o link curto para Whats em suas postagens, Facebook, Instagram." />
+                    <title key="title">Gerador de Link para whats</title>
+                    <meta key="description" name="description" content="Crie link curto para whats com QR Code com o gerador de links para o whats e compartilhe nas redes sociais. Link com mensagem personalizada para whats. Utilize o link curto para whats em suas postagens, Facebook, Instagram." />
                     <link key="canonical" rel="canonical" href="https://app.linkwpp.com/" />
                 </Head>
                 <Header title={<>Sem <span className="text-primary">internet</span></>} description={<></>} />

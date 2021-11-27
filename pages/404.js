@@ -6,7 +6,7 @@ export default function Custom404() {
     return (
         <div className="container">
             <Head>
-                <title key="title">404 - Gerador de Link para Whats</title>
+                <title key="title">404 - Gerador de Link para whats</title>
                 <link key="canonical" rel="canonical" href="https://app.linkwpp.com/404" />
             </Head>
             <Header />
