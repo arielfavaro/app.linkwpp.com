@@ -14,7 +14,7 @@ function Nav() {
                         <Link href="/"><a className="text-white mr-3">Início</a></Link>
                         <Link href="/meus-links"><a className="text-white mr-3">Meus Links</a></Link>
                         <Link href="/como-usar"><a className="text-white mr-3">Como usar</a></Link>
-                        {/* <Link href="/contato"><a className="text-white">Contato</a></Link> */}
+                        <Link href="/contato"><a className="text-white">Contato</a></Link>
                     </div>
                 </div>
             </div>
