@@ -31,11 +31,11 @@ export default function Contato() {
         <div className="container-fluid">
             <div className="container main p-0">
                 <Head>
-                    <title key="title">Contato - Gerador de Link para WhatsApp</title>
+                    <title key="title">Contato - Gerador de Link para Whats</title>
                     <meta key="description" name="description" content="Envie sua mensagem para nós, sugestões ou dúvidas." />
-                    <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/contato" />
+                    <link key="canonical" rel="canonical" href="https://app.linkwpp.com/contato" />
                 </Head>
-                <Header title={<>Entre em <span className="text-primary">contato</span></>} description={<>Envie sua mensagem para nós, <span className="d-block">sugestões ou dúvidas.</span></>} />
+                <Header title={<>Entre em <span className="text-primary">contato</span></>} description={<>Envie sua mensagem para nós, <span className="block">sugestões ou dúvidas.</span></>} />
 
                 <Formik
                     initialValues={{
@@ -58,7 +58,7 @@ export default function Contato() {
                 >
                     {({ errors, touched, isSubmitting, dirty, status }) => (
                         <Form>
-                            <div className="row justify-content-center">
+                            <div className="row justify-center">
                                 <div className="col-12 col-md-6">
                                     <div className="row m-0">
                                         <div className="col-12 px-0 col-md-5">
@@ -110,12 +110,12 @@ export default function Contato() {
                                                     {errors.message && touched.message ? errors.message : null}
                                                 </FieldError>
                                             </div>
-                                            <div className="d-flex justify-content-center">
-                                                <button type="submit" className={`btn btn-success btn-generate-link font-weight-bold w-100`} disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
+                                            <div className="flex justify-center">
+                                                <button type="submit" className={`btn btn-success btn-generate-link font-bold w-100`} disabled={isSubmitting}>{isSubmitting ? 'Enviando...' : 'Enviar'}</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="text-center py-3 font-weight-bold">
+                                    <div className="text-center py-3 font-bold">
                                         {!!status && !!status.success && 'Contato Enviado'}
                                     </div>
                                 </div>

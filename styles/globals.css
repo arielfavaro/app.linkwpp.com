@@ -34,12 +34,41 @@
         @apply focus:outline-none focus:ring-2 focus:ring-primary;
     }
 
-    button {
-        @apply bg-dark-foreground py-2 px-4 rounded-full hover:bg-gray-700;
+    button, .btn {
+        @apply bg-dark-foreground py-2 px-4 rounded-full hover:bg-gray-700 disabled:opacity-50 disabled:cursor-default;
     }
 
+    h1 {
+        @apply text-2xl;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
 }
 
+@layer components {
+
+    .debug {
+        border: 1px solid red;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-dark hover:bg-primary hover:bg-opacity-80 hover:text-white font-bold;
+    }
+
+    .btn-dark {
+        @apply bg-dark-foreground py-2 px-4 rounded-full hover:bg-gray-700 text-white font-bold;
+    }
+}
+
+.error {
+    @apply text-red-400;
+}
 
 .copied-link {
     &,
@@ -47,15 +76,20 @@
         @apply border-green-400 bg-green-400 bg-opacity-70;
     }
 }
+
 .copy-link {
     cursor: pointer;
 }
 
 .generated-link {
-    @apply relative pr-8;
+    @apply relative py-2 pr-8 bg-dark-foreground rounded block truncate text-center;
+
+    &.copied {
+        @apply ring ring-primary bg-primary bg-opacity-30;
+    }
 
     .icon {
-        @apply absolute inset-y-0 right-0 mx-auto mr-3;
+        @apply absolute inset-y-0 right-3 m-auto;
     }
 }
 
@@ -65,8 +99,9 @@
 
 .main {
     @apply min-h-screen;
+}
 
-    .field-error {
-        min-height: 25px;
-    }
+.field-error {
+    min-height: 25px;
+    @apply text-red-400;
 }

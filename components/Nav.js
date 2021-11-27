@@ -5,8 +5,8 @@ export default function Nav() {
     return (
         <nav className={styles.wrapper}>
             <Link href="/">
-                <a className="pb-2 pb-md-0">
-                    <img src="/icons/icon192.png" title="Gerador de Link para WhatsApp" alt="Logo" width="40" />
+                <a className="mb-2 lg:mb-0">
+                    <img src="/icons/icon192.png" title="Gerador de Link para Whats" alt="Logo" width="40" />
                 </a>
             </Link>
             <div className={styles.links}>

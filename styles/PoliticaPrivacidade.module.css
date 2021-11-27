@@ -1,0 +1,23 @@
+.main {
+    @apply bg-dark-foreground p-3 md:p-4 rounded-xl mt-4;
+
+    h2 {
+        @apply text-2xl font-bold mb-4;
+    }
+
+    h3 {
+        @apply text-lg font-bold border-b-2 border-primary inline-block;
+    }
+
+    ul {
+        @apply list-disc ml-4;
+
+        li {
+            @apply mb-2;
+        }
+    }
+
+    p, ul {
+        @apply mb-3;
+    }
+}

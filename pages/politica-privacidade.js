@@ -1,19 +1,20 @@
 import Head from 'next/head'
 import Header from '@/components/Header'
+import styles from '@/styles/PoliticaPrivacidade.module.css'
 
 export default function PoliticaPrivacidade() {
     return (
         <div className="container mb-3">
             <Head>
-                <title key="title">Política de Privacidade - Gerador de Link para WhatsApp</title>
+                <title key="title">Política de Privacidade - Gerador de Link para Whats</title>
                 <meta key="description" name="description" content="A sua privacidade é importante para nós. Não armazenados quaisquer dados fornecido no formulário do gerador de links." />
-                <link key="canonical" rel="canonical" href="https://geradorlinkwhatsapp.com/politica-privacidade" />
+                <link key="canonical" rel="canonical" href="https://app.linkwpp.com/politica-privacidade" />
             </Head>
             <Header />
 
-            <div className="bg-secondary p-3 p-md-4 rounded mt-4">
+            <div className={styles.main}>
                 <h2>Política de Privacidade</h2>
-                <p>A sua privacidade é importante para nós. Respeitamos a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://geradorlinkwhatsapp.com/">Gerador de Link para WhatsApp</a>, e outros sites que possuímos e operamos.</p>
+                <p>A sua privacidade é importante para nós. Respeitamos a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://app.linkwpp.com/">Gerador de Link para Whats</a>, e outros sites que possuímos e operamos.</p>
                 <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
 
                 <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis &#8203;&#8203;para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou
@@ -24,7 +25,7 @@ export default function PoliticaPrivacidade() {
                 <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
 
                 <p>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</p>
-                <h2>Política de Cookies Gerador de Link para WhatsApp</h2>
+                <h2>Política de Cookies Gerador de Link para Whats</h2>
 
                 <h3>O que são cookies?</h3>
 
@@ -104,12 +105,12 @@ export default function PoliticaPrivacidade() {
                 </ul>
                 <h3>Compromisso do Usuário</h3>
 
-                <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Gerador de Link para WhatsApp oferece no site e com caráter enunciativo, mas não limitativo:</p>
+                <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Gerador de Link para Whats oferece no site e com caráter enunciativo, mas não limitativo:</p>
 
                 <ul>
                     <li>A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</li>
                     <li>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, casas de apostas legais (ex.: Bet.pt), jogos de sorte e azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</li>
-                    <li>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Gerador de Link para WhatsApp, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
+                    <li>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Gerador de Link para Whats, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
                 </ul>
 
                 <h3>Mais informações</h3>

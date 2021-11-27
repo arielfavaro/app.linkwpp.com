@@ -17,7 +17,7 @@ export default function Qrcode({ link, code }) {
 
             let qrcode_image = document.createElement('a')
             qrcode_image.href = url
-            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`
+            qrcode_image.download = `geradorlinkwhats-${code}-2500x2500.png`
             qrcode_image.click()
 
         })
@@ -30,8 +30,8 @@ export default function Qrcode({ link, code }) {
     })
 
     return (
-        <div className="d-flex flex-column align-items-center">
-            <button className="btn btn-dark mb-3 font-weight-bold btn-qrcode-download px-5" onClick={downloadQrcode}>Baixar QR Code</button>
+        <div className="flex flex-col items-center">
+            <button className="btn btn-dark mb-3 font-bold btn-qrcode-download px-5" onClick={downloadQrcode}>Baixar QR Code</button>
             <canvas ref={canvasRef}></canvas>
         </div>
     )

@@ -16,13 +16,13 @@ export default function ButtonDownloadQrCode({ link, code }) {
 
             let qrcode_image = document.createElement('a')
             qrcode_image.href = url
-            qrcode_image.download = `geradorlinkwhatsapp-${code}-2500x2500.png`
+            qrcode_image.download = `geradorlinkwhats-${code}-2500x2500.png`
             qrcode_image.click()
 
         })
     }
 
     return (
-        <button className="btn btn-dark btn-sm px-3 font-weight-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
+        <button className="btn btn-dark btn-sm px-3 font-bold btn-qrcode-download rounded" onClick={downloadQrcode}>Baixar QR Code</button>
     )
 }

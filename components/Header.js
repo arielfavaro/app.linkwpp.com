@@ -7,12 +7,12 @@ export default function Header({ title, description }) {
                 {title ||
                     <>
                         Gerador de Link
-                        <span className={styles.highlight}>para <span>WhatsApp</span></span>
+                        <span className={styles.highlight}>para <span>Whats</span></span>
                     </>}
             </h1>
             <p className={styles.description}>
                 {description ||
-                    <>Crie link curto para WhatsApp com QR Code de maneira fácil e compartilhe com seus clientes.</>
+                    <>Crie link curto para Whats com QR Code de maneira fácil e compartilhe com seus clientes.</>
                 }
             </p>
         </header>

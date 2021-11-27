@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply grid grid-cols-6 justify-between;
+    @apply grid lg:grid-cols-6;
 }
 
 .left {
@@ -11,7 +11,7 @@
 }
 
 .center {
-    @apply order-1 lg:order-2 lg:col-span-3;
+    @apply order-1 lg:order-2 lg:col-span-4;
 }
 
 .right {

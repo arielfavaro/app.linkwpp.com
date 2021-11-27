@@ -1,0 +1,14 @@
+.main {
+    ul {
+        h2 {
+            @apply text-xl font-bold mb-2 inline-block;
+        }
+        li {
+            @apply mb-4;
+        }
+    }
+}
+
+.wrapper {
+    @apply flex flex-col lg:flex-row justify-between gap-x-4;
+}

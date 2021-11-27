@@ -9,9 +9,9 @@ export default function Footer() {
                 <Link href="/termos"><a className="mx-2">Termos</a></Link>
             </div>
             <div className={styles.version}>
-                <span className="small d-block">Versão: 0.2.0</span>
-                <span className="small d-block">2021</span>
-                {/* <span className="small d-block mt-3">Made with <FaCoffee /> by <a href="https://arielfavaro.com/" target="_blank" className="text-white">Ariel Favaro</a></span> */}
+                <span className="small block">Versão: 0.2.0</span>
+                <span className="small block">2021</span>
+                {/* <span className="small block mt-3">Made with <FaCoffee /> by <a href="https://arielfavaro.com/" target="_blank" className="text-white">Ariel Favaro</a></span> */}
             </div>
         </footer>
     )
