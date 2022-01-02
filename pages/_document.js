@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { GA_TRACKING_ID, GA_ADS_ID } from '@/lib/analytics';
+import { GA_TRACKING_ID } from '@/lib/analytics';
 
 export default class MyDocument extends Document {
     render() {
@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
                     />
                     {/* End Google Tag Manager */}
 
-                    <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GA_ADS_ID}`} crossOrigin="anonymous"></script>
+                    {/* <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GA_ADS_ID}`} crossOrigin="anonymous"></script> */}
                 </Head>
                 <body>
 
