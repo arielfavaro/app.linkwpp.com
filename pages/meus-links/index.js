@@ -91,7 +91,7 @@ function MyLinks() {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

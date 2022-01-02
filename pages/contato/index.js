@@ -52,7 +52,7 @@ function Contato() {
 
                         if (result.status == 201) {
                             actions.resetForm({});
-                            actions.setStatus({ success: true })
+                            actions.setStatus({ success: true });
                         }
                     }}
                 >
@@ -124,7 +124,7 @@ function Contato() {
                     )}
                 </Formik>
             </div>
-        </div >
+        </div>
     )
 }
 

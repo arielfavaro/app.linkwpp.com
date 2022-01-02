@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import { Formik, Field, Form } from 'formik'
-import MaskedInput from 'react-text-mask'
-import { MdContentCopy } from 'react-icons/md'
-import * as Yup from 'yup'
-import copy from 'copy-to-clipboard'
-import { countryMask, numberMask } from '@/lib/masks'
-import QrCode from '@/components/QrCode'
-import FieldError from '@/components/FieldError'
-import generateLink from '@/services/generateLink'
-import { toast } from 'react-toastify'
+import { useState } from 'react';
+import { Formik, Field, Form } from 'formik';
+import MaskedInput from 'react-text-mask';
+import { MdContentCopy } from 'react-icons/md';
+import * as Yup from 'yup';
+import copy from 'copy-to-clipboard';
+import { countryMask, numberMask } from '@/lib/masks';
+import QrCode from '@/components/QrCode';
+import FieldError from '@/components/FieldError';
+import generateLink from '@/services/generateLink';
+import { toast } from 'react-toastify';
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
