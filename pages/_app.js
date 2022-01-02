@@ -4,6 +4,8 @@ import Nav from '@/components/Nav';
 // import '@/styles/globals.css'
 import '@/styles/globals.scss';
 
+const prevent_indexing = process.env.NEXT_PUBLIC_PREVENT_INDEXING === 'true' || false
+
 function MyApp({ Component, pageProps }) {
     return (
         <>
@@ -15,10 +17,9 @@ function MyApp({ Component, pageProps }) {
                 <meta key="keywords" name="keywords" content="link whats, links, link do whats, gerador de link whats, gerar link whats, gerador de link, gerador link whats, criar link whats, links de whats, qrcode whats, link qrcode, criar qrcode whats" />
                 <link key="canonical" rel="canonical" href="https://app.linkwpp.com/" />
                 <link rel="icon" href="/favicon.ico" />
-
                 <title key="title">Gerador de Link para whats</title>
-
                 <link rel="manifest" href="/manifest.json" />
+                {prevent_indexing && <meta name="robots" content="noindex, nofollow" />}
                 {/* <link
                     href="/icons/favicon-16x16.png"
                     rel="icon"
