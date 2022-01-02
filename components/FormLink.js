@@ -8,6 +8,7 @@ import { countryMask, numberMask } from '@/lib/masks'
 import QrCode from '@/components/QrCode'
 import FieldError from '@/components/FieldError'
 import generateLink from '@/services/generateLink'
+import { toast } from 'react-toastify'
 
 const gerarLinkSchema = Yup.object().shape({
     number: Yup.string()
@@ -44,11 +45,14 @@ export default function FormLink() {
                 }}
                 validationSchema={gerarLinkSchema}
                 onSubmit={async (values) => {
-
-                    const response = await generateLink(values);
-                    const { id, base, code, original, shortened } = response.data;
-                    setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base: base, link_code: code })
-                    storeLink(id);
+                    try {
+                        const response = await generateLink(values);
+                        const { id, base, code, original, shortened } = response.data;
+                        setLinkGenerated({ ...link_generated, link: original, link_shortened: shortened, copied: false, id, link_base: base, link_code: code });
+                        storeLink(id);
+                    } catch (error) {
+                        toast(`Erro ao gerar link. Tente novamente`);
+                    }
                 }}
             >
                 {({ errors, touched, isSubmitting, dirty }) => (

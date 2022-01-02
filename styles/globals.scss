@@ -1,6 +1,10 @@
-@import './variables.scss';
-@import './bootstrap.scss';
+@import "./variables.scss";
+@import "./bootstrap.scss";
+@import "~react-toastify/scss/main";
 
+:root {
+    --toastify-color-progress-light: #{$primary};
+}
 
 ::-webkit-scrollbar,
 html::-webkit-scrollbar {
@@ -33,14 +37,14 @@ html::-webkit-scrollbar-track {
     position: relative;
     padding-right: 32px;
     // &:not(.copied-link) {
-        .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            margin-right: 12px;
-        }
+    .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        margin-right: 12px;
+    }
     // }
 }
 
@@ -58,7 +62,11 @@ html::-webkit-scrollbar-track {
 }
 
 // footer {
-    // position: absolute;
-    // right: 10px;
-    // bottom: 10px;
+// position: absolute;
+// right: 10px;
+// bottom: 10px;
 // }
+
+.Toastify {
+    font-weight: 700;
+}

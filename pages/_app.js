@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 // import '@/styles/globals.css'
 import '@/styles/globals.scss';
+import { ToastContainer } from 'react-toastify';
 
 const prevent_indexing = process.env.NEXT_PUBLIC_PREVENT_INDEXING === 'true' || false
 
@@ -49,6 +50,17 @@ function MyApp({ Component, pageProps }) {
 
             </Head>
             <Nav />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             <Component {...pageProps} />
             <Footer />
         </>

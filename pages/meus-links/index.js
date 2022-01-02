@@ -7,6 +7,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 import { Ads } from "@/components/Ads";
 import ButtonDownloadQrCode from "@/components/ButtonDownloadQrCode";
 import copy from "copy-to-clipboard";
+import { toast } from "react-toastify";
 
 function MyLinks() {
 
@@ -18,8 +19,12 @@ function MyLinks() {
     useEffect(async () => {
         const storage_links = JSON.parse(localStorage.getItem('linkwpp.links'));
         if (storage_links) {
-            const { data } = await myPublicLinks(storage_links);
-            setLinks(data);
+            try {
+                const { data } = await myPublicLinks(storage_links);
+                setLinks(data);
+            } catch (error) {
+                toast(`Erro ao obter os links`);
+            }
         }
         setEmpty(!storage_links);
         setLoading(false);
